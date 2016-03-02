@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="Gradebook">
+<head>
+    <title>AngularJS Gradebook App</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="" ng-controller="gradebookCtrl">
+        <h1 class="">AngularJS Gradebook App</h1>
+        
+        <div id="gradeGroup" class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5">
+					<label class="col-xs-6">Assignment 1:</label>
+					<input class="col-xs-6" type="number" ng-model="grade1">
+
+					<label class="col-xs-6">Assignment 2:</label>
+					<input class="col-xs-6" type="number" ng-model="grade2">
+
+					<label class="col-xs-6">Assignment 3:</label>
+					<input class="col-xs-6" type="number" ng-model="grade3">
+
+					<label class="col-xs-6">Assignment 4:</label>
+					<input class="col-xs-6" type="number" ng-model="grade4">
+
+					<label class="col-xs-6">Assignment 5:</label>
+					<input class="col-xs-6" type="number" ng-model="grade5">
+	     	</div>
+        
+        <div id="buttonGroup" class="col-xs-8 col-xs-offset-2">
+					<button class="btn btn-danger" type="button" ng-click="onClickClear()"><i class="fa fa-times-circle"></i>Clear</button>
+
+					<button class="btn btn-success" type="button" ng-click="calcAvg()">Calculate Average</button>
+					<div id="output">
+						<h1>Average GPA & Grade:</h1>
+						<h2 id="results" class="">{{result}}% {{letterGrade}}</h2>
+					</div>
+      	</div>
+
+      	
+    </div>
+
+    <script type="text/javascript" src="scripts/angular/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/js/gradebook.js"></script>
+ 
+</body>
+</html>
